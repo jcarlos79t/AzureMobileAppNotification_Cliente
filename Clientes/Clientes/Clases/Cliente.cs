@@ -8,11 +8,11 @@ namespace Clientes.Clases
     {
         [Newtonsoft.Json.JsonProperty("Id")]
         public string Id { get; set; }
-        [Microsoft.WindowsAzure.MobileServices.Version]
-        public string AzureVersion { get; set; }
-        [Newtonsoft.Json.JsonProperty("userId")]
-        public string UserId { get; set; }
-        public DateTime DateUtc { get; set; }
+        //[Microsoft.WindowsAzure.MobileServices.Version]
+        //public string AzureVersion { get; set; }
+        //[Newtonsoft.Json.JsonProperty("userId")]
+        //public string UserId { get; set; }
+        //public DateTime DateUtc { get; set; }
 
         public string Nombre { get; set; }
         public string Apellidos { get; set; }      
