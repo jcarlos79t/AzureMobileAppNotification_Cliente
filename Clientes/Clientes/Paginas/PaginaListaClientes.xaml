@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clientes.Paginas.PaginaListaClientes">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Label Text="Clientes" FontSize="40" HorizontalOptions="Center"/>
+
+            <ListView x:Name="lsvClientes" ItemSelected="lsvClientes_Selected" RowHeight="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Apellidos}"
+                     TextColor="Blue" FontSize="16"/>
+                                    <Switch IsToggled="{Binding Activo}" HorizontalOptions="EndAndExpand"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Celular}" HorizontalOptions="StartAndExpand" TextColor="Green" FontSize="12"/>
+                                    <Label Text="{Binding Correo}" HorizontalOptions="EndAndExpand" TextColor="Green" FontSize="12"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnNuevo" Text="Nuevo" Priority="0" Clicked="btnNuevo_Click" Order="Primary" Icon="agregar.png"/>
+    </ContentPage.ToolbarItems>
+
+
+
+</ContentPage>
